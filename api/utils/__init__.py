@@ -32,7 +32,7 @@ def conversion_result_search(results):
     return data
 
 def conversion_result_login(result):
-    # create a new token with the user id inside
+    # create a new token with the user id inside current_user = get_jwt_identity()
     access_token = create_access_token(identity=result[0])
     return {
         'id': result[7],
